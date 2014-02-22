@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ExtensibleTableView.h"
+#import "DownloadTask.h"
 
-@interface FCViewController : UIViewController
+@interface FCViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,ExtensibleTableViewDelegate,DownloadTaskDelegate>
+{
+    ExtensibleTableView *radioTable;
+    NSMutableArray *radioListArray;
+    NSMutableArray *downloadingArray;
+    NSMutableDictionary *statusDict;
+    NSMutableArray *taskArray;
+}
+
 
 @end
