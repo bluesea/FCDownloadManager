@@ -1,0 +1,18 @@
+/* 
+  FrameWorksNeeded.strings
+
+==========需要包含的库========
+ 
+  Created by Harley.GB on 12/6/12.
+
+ /=========================
+ CFNetwork.framework
+ SystemConfiguration.framework
+ MobileCoreServices.framework
+ CoreGraphics.framework
+ libz.dylib
+ libxml2.dylib
+ /=========================
+ 
+*/
+

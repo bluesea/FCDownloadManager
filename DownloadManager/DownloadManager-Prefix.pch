@@ -14,3 +14,23 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+#define SAFE_RELEASE(x) [x release];x=nil
+
+#define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
+#define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+#define IsIOS7 ([[[[UIDevice currentDevice] systemVersion] substringToIndex:1] intValue]>=7)
+//下载文件保存地址
+#define fileDestination [NSHomeDirectory() stringByAppendingPathComponent:@"/Documents"]
+#define temporaryFileDestination [NSHomeDirectory() stringByAppendingPathComponent:@"/Documents"]
+
+#define Font(X) [UIFont fontWithName:@"STHeitiSC-Light" size:X]
+
+
+//任务状态
+typedef enum {
+    CSTaskStatus_standby,       //任务初始化完毕，未开始执行
+    CSTaskStatus_running,       //正在执行中
+    CSTaskStatus_interrupted,   //任务未完成，被中断
+    CSTaskStatus_finished,        //任务完毕
+    CSTaskStatus_failed             //任务失败
+}CSTaskStatus;
